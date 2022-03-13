@@ -1,0 +1,17 @@
+# workflow の名前
+name: ci test
+# workflow を実行するタイミング(push時)
+on: push
+jobs:
+  build:
+    # 実行する環境
+    runs-on: ubuntu-latest
+    steps:
+      # PRのブランチに移動
+      - uses: actions/checkout@v2
+      # module を install
+      - name: Install modules
+        run: yarn
+      # test を実行
+      - name: Run tests
+        run: yarn test
