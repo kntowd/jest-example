@@ -11,7 +11,7 @@ const fizzBuzz = (num) => {
       return 'Buzz'
     }
 
-    return num
+    return num.toString();
 };
 
 module.exports = { fizzBuzz };
